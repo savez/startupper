@@ -1,0 +1,99 @@
+---
+  - hosts: 127.0.0.1
+    connection: local
+
+    vars:
+      dev_env_dir: /opt/startupper
+
+    tasks:
+      - name: Install Docker for Desktop
+        community.general.homebrew_cask:
+          name: docker
+          state: present
+
+      - name: Install AWS cli
+        community.general.homebrew:
+          name:
+            - awscli
+          state: present
+
+      - name: Install Google cloud sdk
+        community.general.homebrew_cask:
+          name: google-cloud-sdk
+          state: present
+
+      - name: Install cloud native dependencies
+        community.general.homebrew:
+          name:
+            - docker-completion
+            - docker-compose
+            - docker-credential-helper-ecr
+            - imagemagick
+          state: present
+
+      - name: Install "nerds" system packages
+        community.general.homebrew:
+          name:
+            - neofetch
+            - gpg
+            - thefuck
+            - yadm
+          state: present
+
+      - name: Install development packages
+        community.general.homebrew:
+          name:
+            - node
+            - yarn
+            - yarn-completion
+            - php
+            - golang
+          state: present
+
+      - name: Install system packages from cask
+        community.general.homebrew_cask:
+          name:
+            - iterm2
+            - visual-studio-code
+            - postman
+          state: present
+      
+      - name: Install db programs
+        community.general.homebrew_cask:
+          name:
+            - dbeaver
+          state: present
+
+      - name: Create resolver directory
+        file: path=/etc/resolver state=directory mode=0755
+        become: yes
+        become_method: sudo
+
+      - name: Create loc resolver file
+        file: path=/etc/resolver/loc state=touch mode=0755
+        become: yes
+        become_method: sudo
+
+      - name: Add nameserver line to /etc/resolver/loc
+        lineinfile: dest=/etc/resolver/loc state=present line="nameserver 127.0.0.1"
+        become: yes
+        become_method: sudo
+
+      - name: Add port line to /etc/resolver/loc
+        lineinfile: dest=/etc/resolver/loc state=present line="port 19322"
+        become: yes
+        become_method: sudo
+
+      - name: Clear dns cache
+        command: killall -HUP mDNSResponder
+        become: yes
+        become_method: sudo
+
+      - name: Copy dinghy-http-proxy start script
+        copy:
+          src: "{{ dev_env_dir }}/config/macos/bin/run-dinghy-proxy"
+          dest: /usr/local/bin/run-dinghy-proxy
+          force: yes
+          mode: uog+rwx
+        become: yes
+        become_method: sudo
