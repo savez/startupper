@@ -14,5 +14,4 @@
             - bitwarden
             - miro
             - hot
-            - clickup
           state: present
