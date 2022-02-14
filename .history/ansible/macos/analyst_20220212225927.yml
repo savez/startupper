@@ -17,6 +17,15 @@
           name: google-cloud-sdk
           state: present
 
+      - name: Install "nerds" system packages
+        community.general.homebrew:
+          name:
+            - neofetch
+            - gpg
+            - thefuck
+            - yadm
+          state: present
+
       - name: Install development packages
         community.general.homebrew:
           name:
