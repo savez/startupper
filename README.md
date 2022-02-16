@@ -18,6 +18,16 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 
 ## Programs
 
+### designer
+
+- gimp
+- figma
+
+### it
+
+- anydesk
+- microsoft-remote-desktop
+
 ### developers
  
 - docker
