@@ -16,6 +16,27 @@ To install on MacOS
 bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/install.macos)
 ```
 
+## Programs
+
+### developers
+ 
+- docker
+- awscli
+- google-cloud-sdk
+- docker-completion
+- docker-compose
+- docker-credential-helper-ecr
+- imagemagick
+- node
+- yarn
+- yarn-completion
+- php
+- golang
+- nvm
+- iterm2
+- visual-studio-code
+- postman
+- dbeaver
 
 # Thanks
 
