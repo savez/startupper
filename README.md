@@ -38,6 +38,20 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 - postman
 - dbeaver
 
+### general programs
+
+- slack
+- google-chrome
+- firefox
+- bitwarden
+- miro
+- hot
+- clickup
+- homebrew/cask-versions/tunnelblick-beta
+- neofetch
+- thefuck
+- yadm
+
 # Thanks
 
 This project was born thanks to [SparkFabrik](<https://github.com/sparkfabrik>).
