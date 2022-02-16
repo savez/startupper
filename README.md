@@ -3,6 +3,7 @@
 This is an automatic MacOS system provisioner, based on Ansible.
 
 This script allows you to install and configure your new laptop using three different profiles: developer, analyst, designer, IT.
+
 If you are using a git yadm the repository will be downloaded and configured via the saved dotfiles.
 
 ## Installation
