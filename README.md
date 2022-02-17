@@ -18,6 +18,22 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 
 ## Programs
 
+### analyst
+
+- iterm2
+- visual-studio-code
+- postman
+- node
+- yarn
+- yarn-completion
+- php
+- golang
+- python@3.10
+- dbeaver
+- openrefine
+- awscli
+- google-cloud-sdk
+
 ### designer
 
 - gimp
