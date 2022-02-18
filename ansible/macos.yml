@@ -20,8 +20,3 @@
     import_playbook: macos/it.yml
     when: ansible_distribution_version | regex_search('^(12.[0-9]+)') and userType == "it"
 
-  - name: Message for macOS <= 12.x
-    ansible.builtin.debug:
-        msg: Ansible playbook run only MacOS >= 12.x
-    when: ansible_distribution_version | regex_search('^(11.[0-9]+)')
-
