@@ -63,7 +63,7 @@ git clone https://github.com/savez/startupper.git /opt/startupper
 print "Run ansible playboook..."
 cd /opt/startupper
 read -p 'Who you are ? [developer|analyst|designer|it]: ' userType
-echo 'WELCOME ${userType} !'
+echo 'WELCOME '  ${userType}
 if [[ ${userType} != 'developer' && ${userType} != 'analyst' && ${userType} != 'designer' && ${userType} != 'it' ]]; then
 echo 'Playbook not found! check input'
 fi
@@ -72,17 +72,13 @@ ansible-playbook ./ansible/base.yml -i 127.0.0.1 --ask-become-pass
 
 # YADM repository
 read -p 'Do you have a yadm repository? [S|N]: ' checkYadmRepository
-if [[ checkYadmRepository == 'S']]
-then
+if [[ checkYadmRepository == 'S']]; then
 read -p 'What is your url for yadm repository?: ' yadmRepository
-
 yadm clone yadmRepository -f
 yadm pull
-
 else
 ## Print some useful messages.
 print "Now remember to add to your .bashrc or .zshrc the following commands:\n"
-
 brew info google-cloud-sdk
 fi
 
