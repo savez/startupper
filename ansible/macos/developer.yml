@@ -53,7 +53,7 @@
       - name: Install db programs
         community.general.homebrew_cask:
           name:
-            - dbeaver
+            - dbeaver-community
           state: present
 
       - name: Create resolver directory
