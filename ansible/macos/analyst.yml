@@ -39,6 +39,6 @@
       - name: Install db programs
         community.general.homebrew_cask:
           name:
-            - dbeaver
+            - dbeaver-community
             - openrefine
           state: present
