@@ -61,14 +61,14 @@ git clone https://github.com/savez/startupper.git /opt/startupper
 
 ## Run Ansible Playbook
 print "Run ansible playboook..."
-cd /opt/startupper
 read -p 'Who you are ? [developer|analyst|designer|it]: ' userType
 echo 'WELCOME '  ${userType}
 if [[ ${userType} != 'developer' && ${userType} != 'analyst' && ${userType} != 'designer' && ${userType} != 'it' ]]; then
 echo 'Playbook not found! check input'
 else
-ansible-playbook ./../ansible/macos.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
-ansible-playbook ./../ansible/base.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
+cd /opt/startupper
+ansible-playbook ./ansible/macos.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
+ansible-playbook ./ansible/base.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
 fi
 
 # YADM repository
