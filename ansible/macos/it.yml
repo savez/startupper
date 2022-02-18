@@ -11,4 +11,5 @@
           name:
             - anydesk
             - microsoft-remote-desktop
+            - angry-ip-scanner
           state: present
