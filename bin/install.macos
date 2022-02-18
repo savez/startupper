@@ -67,8 +67,8 @@ echo 'WELCOME '  ${userType}
 if [[ ${userType} != 'developer' && ${userType} != 'analyst' && ${userType} != 'designer' && ${userType} != 'it' ]]; then
 echo 'Playbook not found! check input'
 fi
-ansible-playbook ./ansible/macos.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
-ansible-playbook ./ansible/base.yml -i 127.0.0.1 --ask-become-pass
+ansible-playbook ../ansible/macos.yml -i 127.0.0.1 --ask-become-pass -e userType=${userType}
+ansible-playbook ../ansible/base.yml -i 127.0.0.1 --ask-become-pass
 
 # YADM repository
 read -p 'Do you have a yadm repository? [S|N]: ' checkYadmRepository
