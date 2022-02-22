@@ -40,6 +40,8 @@
             - php
             - golang
             - nvm
+            - hashicorp/tap
+            - hashicorp/tap/terraform
           state: present
 
       - name: Install system packages from cask
