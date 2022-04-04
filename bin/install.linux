@@ -38,6 +38,7 @@ if [[ ${userType} != 'developer' && ${userType} != 'analyst' && ${userType} != '
 echo 'Playbook not found! check input'
 else
 ansible-playbook /tmp/dev-env/ansible/linux.yml -i 127.0.0.1,
+ansible-playbook /tmp/dev-env/ansible/linux/base.yml -i 127.0.0.1,
 fi
 
 echo -e "\n\n"
