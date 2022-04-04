@@ -1,0 +1,24 @@
+---
+  - hosts: 127.0.0.1
+    connection: local
+
+    vars:
+      dev_env_dir: /opt/startupper
+
+    tasks:
+      - name: Install general programs
+        apt:
+          pkg:
+            - slack-desktop
+            - snapd
+          state: latest
+          update_cache: yes
+      - name: Install general programs by snap
+        community.general.snap:
+          name: 
+            - clickup
+            - chromium
+            - firefox
+            - bitwarden
+            - miro
+          classic: yes
