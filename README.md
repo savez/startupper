@@ -10,13 +10,13 @@ If you are using a git yadm the repository will be downloaded and configured via
 
 ### MacOS
 
-To install on MacOS
+To install on MacOS or Linux or WSL windows
 
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/install.macos)
 ```
 
-## Programs
+## Programs for MacOS
 
 ### analyst
 
