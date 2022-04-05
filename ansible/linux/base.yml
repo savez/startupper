@@ -11,6 +11,8 @@
           pkg:
             - slack-desktop
             - snapd
+            - zip
+            - unzip
           state: latest
           update_cache: yes
       - name: Install general programs by snap
