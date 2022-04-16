@@ -1,0 +1,18 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Install Docker and packages requirements
+      community.general.snap:
+          name: 
+            - krdc
+          classic: yes
+    - name: Install development packages
+      apt:
+        pkg:
+          - anydesk
+          - nmap
+        state: present
