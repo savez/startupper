@@ -32,7 +32,7 @@ cd /tmp/dev-env && git fetch && git reset --hard origin/master
 ## Run Ansible Playbook ##
 echo 'Run ansible playboook...'
 echo -e "\n\n"
-read -p 'Who you are ? [developer]: ' userType
+read -p 'Who you are ? [developer | designer | analyst | it]: ' userType
 echo 'WELCOME '  ${userType}
 if [[ ${userType} != 'developer' && ${userType} != 'analyst' && ${userType} != 'designer' && ${userType} != 'it' ]]; then
 echo 'Playbook not found! check input'

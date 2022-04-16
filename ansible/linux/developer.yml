@@ -79,6 +79,7 @@
         src: "config/keyboard/en-intl-alt-gr-dead-keys.keylayout"
         dest: ~/Library/Keyboard\ Layouts
         force: yes
+        
     - name: Install development packages
       apt:
         pkg:
@@ -92,11 +93,13 @@
       ansible.builtin.shell: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install
       args:
         executable: /bin/bash
+    
     - name: Install Gcloud cli
       community.general.snap:
           name: 
             - google-cloud-cli
           classic: yes
+        
     - name: Install development software
       community.general.snap:
           name: 

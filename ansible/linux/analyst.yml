@@ -1,0 +1,34 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Install development packages
+      apt:
+        pkg:
+          - node
+          - yarn
+          - php
+          - golang
+          - nvm
+        state: present
+
+    - name: Install aws cli
+      ansible.builtin.shell: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install
+      args:
+        executable: /bin/bash
+
+    - name: Install Gcloud cli
+      community.general.snap:
+          name: 
+            - google-cloud-cli
+          classic: yes
+
+    - name: Install development software
+      community.general.snap:
+          name: 
+            - code
+            - dbeaver-ce
+          classic: yes
