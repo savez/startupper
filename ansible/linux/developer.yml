@@ -79,7 +79,7 @@
         src: "config/keyboard/en-intl-alt-gr-dead-keys.keylayout"
         dest: ~/Library/Keyboard\ Layouts
         force: yes
-        
+
     - name: Install development packages
       apt:
         pkg:
@@ -105,4 +105,5 @@
           name: 
             - code
             - dbeaver-ce
+            - postman
           classic: yes
