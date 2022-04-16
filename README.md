@@ -43,8 +43,9 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 
 - anydesk
 - microsoft-remote-desktop
+- angry-ip-scanner
 
-### developers
+### developer
  
 - docker
 - awscli
@@ -77,6 +78,46 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 - neofetch
 - thefuck
 - yadm
+
+## Programs for Linux
+
+### analyst
+
+- visual-studio-code
+- node
+- yarn
+- yarn-completion
+- php
+- golang
+- python@3.10
+- dbeaver
+- openrefine
+- awscli
+- google-cloud-sdk
+
+### designer
+
+- gimp
+- figma
+
+### it
+
+- anydesk
+- microsoft-remote-desktop
+
+### developer
+
+- docker
+- awscli
+- google-cloud-sdk
+- node
+- yarn
+- php
+- golang
+- nvm
+- visual-studio-code
+- postman
+- dbeaver
 
 # Thanks
 

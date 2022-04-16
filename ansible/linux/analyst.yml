@@ -31,4 +31,5 @@
           name: 
             - code
             - dbeaver-ce
+            - openrefine
           classic: yes
