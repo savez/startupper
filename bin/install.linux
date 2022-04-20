@@ -24,6 +24,10 @@ sudo apt-get updates
 sudo apt-get -y install git ansible
 echo -e "\n\n"
 
+echo "Install community modules ansible"
+ansible-galaxy collection install community.general
+echo -e "\n\n"
+
 ## Check out a copy of this repo (first time only) ##
 echo 'Checking out Startupper repo...'
 git clone https://github.com/savez/startupper.git /tmp/dev-env 2>/dev/null
