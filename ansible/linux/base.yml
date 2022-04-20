@@ -22,4 +22,5 @@
             - firefox
             - bitwarden
             - miro
+            - slack
           classic: yes
