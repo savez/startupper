@@ -31,7 +31,7 @@ echo -e "\n\n"
 ## Check out a copy of this repo (first time only) ##
 echo 'Checking out Startupper repo...'
 git clone https://github.com/savez/startupper.git /tmp/dev-env 2>/dev/null
-cd /tmp/dev-env && git fetch && git reset --hard origin/master
+cd /tmp/dev-env && git fetch && git reset --hard origin/main
 
 ## Run Ansible Playbook ##
 echo 'Run ansible playboook...'
