@@ -9,7 +9,6 @@
       - name: Install general programs
         apt:
           pkg:
-            - slack-desktop
             - snapd
             - zip
             - unzip
