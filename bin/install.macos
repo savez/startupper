@@ -74,15 +74,16 @@ fi
 
 # YADM repository
 read -p 'Do you have a yadm repository? [S|N]: ' checkYadmRepository
-if [[ ${checkYadmRepository} == 'S']]; then
+if [[ ${checkYadmRepository} == 'S' ]]; then
 read -p 'What is your url for yadm repository?: ' yadmRepository
 yadm clone ${yadmRepository} -f
 yadm pull
 else
 ## Print some useful messages.
-print "Now remember to add to your .bashrc or .zshrc the following commands:\n"
-brew info google-cloud-sdk
+print "remember, if you want, to configure yadm and your repository"
 fi
+
+brew info google-cloud-sdk
 
 echo ""
 echo ""
