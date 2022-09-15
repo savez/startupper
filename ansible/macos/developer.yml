@@ -91,3 +91,6 @@
           mode: uog+rwx
         become: yes
         become_method: sudo
+
+      - name: Add dotenv-vault how global package npm
+        ansible.builtin.command: npm i -g dotenv-vault
