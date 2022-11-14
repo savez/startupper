@@ -17,6 +17,7 @@
             - hot
             - clickup
             - homebrew/cask-versions/tunnelblick-beta
+            - hiddenbar
           state: present
       - name: Install "nerds" system packages
         community.general.homebrew:
