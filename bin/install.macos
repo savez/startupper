@@ -78,10 +78,17 @@ if [[ ${checkYadmRepository} == 'S' ]]; then
 read -p 'What is your url for yadm repository?: ' yadmRepository
 yadm clone ${yadmRepository} -f
 yadm pull
+  # BREW bundle dump
+  read -p 'Do you have a brew bundle? [S|N]: ' checkBrewRepository
+  if [[ ${checkBrewRepository} == 'S' ]]; then
+  brew bundle install
+  else
+  fi
 else
 ## Print some useful messages.
 print "remember, if you want, to configure yadm and your repository"
 fi
+
 
 brew info google-cloud-sdk
 
