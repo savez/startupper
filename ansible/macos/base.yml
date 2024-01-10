@@ -11,6 +11,7 @@
           name:
             - slack
             - google-chrome
+            - arc
             - firefox
             - bitwarden
             - miro

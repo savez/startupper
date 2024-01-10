@@ -69,6 +69,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/savez/startupper/master/bin/
 
 - slack
 - google-chrome
+- arc-browser
 - firefox
 - bitwarden
 - miro
