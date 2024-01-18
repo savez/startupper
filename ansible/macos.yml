@@ -4,19 +4,21 @@
     become: true
     become_user: root
 
-  - name: Importing DEVELOPER playbook for macOS 12
+  - name: Importing DEVELOPER playbook for macOS
     import_playbook: macos/developer.yml
     when: ansible_distribution_version | regex_search('^(12.[0-9]+)') and userType == "developer"
 
-  - name: Importing ANALYST playbook for macOS 12
+  - name: Importing ANALYST playbook for macOS
     import_playbook: macos/analyst.yml
     when: ansible_distribution_version | regex_search('^(12.[0-9]+)') and userType == "analyst"
   
-  - name: Importing DESIGNER playbook for macOS 12
+  - name: Importing DESIGNER playbook for macOS
     import_playbook: macos/designer.yml
     when: ansible_distribution_version | regex_search('^(12.[0-9]+)') and userType == "designer"
   
-  - name: Importing IT playbook for macOS 12
+  - name: Importing IT playbook for macOS
     import_playbook: macos/it.yml
     when: ansible_distribution_version | regex_search('^(12.[0-9]+)') and userType == "it"
+
+  
 
